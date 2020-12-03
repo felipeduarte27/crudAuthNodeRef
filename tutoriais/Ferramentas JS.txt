@@ -1,0 +1,59 @@
+Obs: ctrl + shift + P abre a paleta em cima no VSCode - digita settings (json)
+
+1 - Instalar o VSCode
+
+2 - Instala o plugin vscode-icons e habilita ele
+	2.1 File -> Preferences-> File icon theme
+	
+3 - Configura o VSCode
+{
+    //icones 
+    "workbench.iconTheme": "vscode-icons",
+    //tamanho da fonte
+    "editor.fontSize": 16,
+    //altura da linha
+    "editor.lineHeight": 24,
+    //formatar ao salvar um arquivo
+    "editor.formatOnSave": true,
+    //quantidade de espaços do tab
+    "editor.tabSize": 2,
+    //não mostrar um retangolo em toda a linha selecionada
+    "editor.renderLineHighlight": "gutter",
+    //aumenta o tamanho da fonte do terminal
+    "terminal.integrated.fontSize": 16,
+    //vscode entender o autocomplete do javascript
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx"
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    //desativar atualizações automaticas de arquivos
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    //habilita o caminho dos arquivos em cima do editor
+    "breadcrumbs.enabled": true,
+    //desabilita pop up de documentação
+    "editor.parameterHints.enabled": false,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "explorer.confirmDelete": false,
+    // configurar as ações que devem ser executadas ao salvar um arquivo
+  "editor.codeActionsOnSave": {
+    // executar o ESLint
+    "source.fixAll.eslint": true
+  },
+  // desabilitar o plugin do Prettier para arquivos .js e .jsx
+  "prettier.disableLanguages": ["javascript", "javascriptreact"]
+}
+
+4 - Instala o plugin Color Highlight
+5 - Instala o plugin Editorconfig For vs Code
+6 - Instala o plugin Eslint
+7 - Instala o plugin Prettier (aki ele ja começa a mudar o editor ao salvar)
+8 - Instala o Node
+9 - Instala o Git
+10 - Instala o Docker
+11 - Instala o Insomnia ou Postman
+12 - Instala o Postbird
+
+13 - Colocar o bash do git como padrão no vscode
+	13.1 - Ctrl + Shift + P -> select defautl shell -> escolhe Git Bash

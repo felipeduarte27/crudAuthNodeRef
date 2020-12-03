@@ -1,0 +1,97 @@
+-------------------USANDO O NPM---------------------------------------------------------
+
+- npm init -y
+
+- npm add express
+
+- npm add sucrase -D
+
+- npm add nodemon -D
+
+: Adiciona o seguitne script no package.json
+
+"scripts": {
+    "dev": "nodemon src/server.js"
+  }
+  
+  
+: Adiciona o arquivo nodemon.json na raiz do projeto
+: Informa que você irá subir o servidor com o Sucrase e não o com o Node puro
+
+{
+  "execMap": {
+    "js": "sucrase-node"
+  }
+}
+
+------------------------- CRIANDO O SERVIDOR E RODANDO ---------------------------------------------
+
+- Criar os arquivos do servidor utilizando o express
+
+:server.js
+:app.js
+:routes.js
+
+- verifica se o servidor rodou com o comando
+
+: npm run dev (o script que eu criei em cima de nome dev)
+
+-------------------USANDO O ESLINT E PRETTIER--------------------------------------------
+Resummo[
+- npm install eslint --save-dev
+- npx eslint --init
+
+: respostas: cheque sintaxe, encontre problemas e force estilo
+: se usa sucrase coloca import/export
+: define a popular style airbnb
+
+- npm install --save-dev --save-exact prettier
+- npm install --save-dev eslint-config-prettier
+- npm install --save-dev eslint-config-prettier
+]
+
+: no arquivo .eslintrc.js as configurações tem que ser parecidas com isso
+{
+	module.exports = {
+	env: {
+		browser: true,
+		es2021: true,
+		node: true,
+	},
+	extends: ['airbnb-base', 'prettier'],
+	plugins: ['prettier'],
+	parserOptions: {
+		ecmaVersion: 12,
+		sourceType: 'module',
+	},
+	rules: {
+		'prettier/prettier': [
+		'error',
+		{
+			'endOfLine': 'auto',
+		},
+		],
+		'class-methods-use-this': 'off',
+		'no-param-reassign': 'off',
+		'camelcase': 'off',
+		'no-unused-vars': ['error', { 'argsIgnorePattern': 'next' }],
+	},
+	};
+}
+
+: Criar o arquivo .prettierrc e colocar a seguinte configuração
+
+{
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "quoteProps": "preserve"
+}
+
+-------------------GERANDO EDITOR CONFIG------------------------------------------------------
+
+: Clicka com o botão direito na raiz do projeto e coloca .generatoreditorconfig
+: Configurações a serem alteradas
+
+- trim_trailing_whitespace = true
+- insert_final_newline = true
+
