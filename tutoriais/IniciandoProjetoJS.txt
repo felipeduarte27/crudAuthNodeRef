@@ -13,8 +13,8 @@
 "scripts": {
     "dev": "nodemon src/server.js"
   }
-  
-  
+
+
 : Adiciona o arquivo nodemon.json na raiz do projeto
 : Informa que você irá subir o servidor com o Sucrase e não o com o Node puro
 
@@ -95,3 +95,46 @@ Resummo[
 - trim_trailing_whitespace = true
 - insert_final_newline = true
 
+-------------------GIT------------------------------------------------------
+
+: Cria o repositorio no git, add a origem, comita e faz push
+
+-------------------SEQUELIZE------------------------------------------------------------------
+
+- yarn add sequelize
+
+- yarn add sequelize-cli -D
+
+- yarn add pg pg-hstore
+
+- yarn sequelize migration:create --name=create-users
+
+- yarn sequelize db:migrate
+
+- yarn sequelize db:migrate:undo
+
+- yarn sequelize db:migrate:undo:all
+
+-------------------RODAR APLICAÇÃO TEMPLATE---------------------------------------------------
+
+: Clona o projeto
+
+- git clone "repositorio"
+
+: Inicializa as dependencias do projeto
+
+- npm i
+
+: Cria o container do docker
+
+- docker run --name corestudio -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+
+: Cria o banco "corestudio" pelo postbird em Create Database
+
+: Roda as migrations para se criar as tabelas do banco
+
+- - yarn sequelize db:migrate
+
+: Só testar!
+
+- yarn dev
