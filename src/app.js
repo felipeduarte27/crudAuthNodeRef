@@ -1,6 +1,7 @@
 import express from 'express';
 import routes from './routes';
-// import './database';
+// Arquivo que vai carregar todos os models e fazer a conexão com o banco
+import './database';
 
 // Instanciei o servidor utilizando o express e disse que vou utilizar as rotas e os middlewares
 class App {

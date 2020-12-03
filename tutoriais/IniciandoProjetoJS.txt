@@ -99,6 +99,33 @@ Resummo[
 
 : Cria o repositorio no github ou lab, add a origem, comita e faz push
 
+-------------------BANCO DE DADOS------------------------------------------------------
+
+npm install --save sequelize
+
+npm install --save-dev sequelize-cli
+
+npm install --save pg pg-hstore
+
+: Cria o arquivo de configuração sequelizerc
+
+: Cria o arquivo de configuração do BANCO
+
+: Cria o Modelo utilizando os sequelize
+
+: Cria o arquivo de carregamento dos modelos e importa no app.js
+
+: Usando o sequelize-cli cria as migrations
+- npx sequelize migration:create --name=criar-usuario
+
+- npx sequelize db:migrate
+
+- npx sequelize db:migrate:undo:all
+
+: OBS: A TABELA TEM QUE TER S NO FIM, TIPO USUARIOS E NÃO PODE FALTAR O CREART AT E UPDATE AT
+
+: Cria o controller p acessar e chamar o modelo p salvar no banco
+
 -------------------RODAR APLICAÇÃO TEMPLATE---------------------------------------------------
 
 : Clona o projeto
@@ -109,16 +136,4 @@ Resummo[
 
 - npm i
 
-: Cria o container do docker
 
-- docker run --name corestudio -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
-
-: Cria o banco "corestudio" pelo postbird em Create Database
-
-: Roda as migrations para se criar as tabelas do banco
-
-- - npm sequelize db:migrate
-
-: Só testar!
-
-- npm run dev
