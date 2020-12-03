@@ -97,23 +97,7 @@ Resummo[
 
 -------------------GIT------------------------------------------------------
 
-: Cria o repositorio no git, add a origem, comita e faz push
-
--------------------SEQUELIZE------------------------------------------------------------------
-
-- yarn add sequelize
-
-- yarn add sequelize-cli -D
-
-- yarn add pg pg-hstore
-
-- yarn sequelize migration:create --name=create-users
-
-- yarn sequelize db:migrate
-
-- yarn sequelize db:migrate:undo
-
-- yarn sequelize db:migrate:undo:all
+: Cria o repositorio no github ou lab, add a origem, comita e faz push
 
 -------------------RODAR APLICAÇÃO TEMPLATE---------------------------------------------------
 
@@ -133,8 +117,8 @@ Resummo[
 
 : Roda as migrations para se criar as tabelas do banco
 
-- - yarn sequelize db:migrate
+- - npm sequelize db:migrate
 
 : Só testar!
 
-- yarn dev
+- npm run dev

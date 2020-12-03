@@ -6,5 +6,5 @@ const routes = new Router();
 // routes.post('/storeUser', UserController.store);
 // routes.post('/login', SessionController.store);
 
-// exorto as rotas
+// exportando as rotas
 export default routes;
