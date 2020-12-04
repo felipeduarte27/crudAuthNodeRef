@@ -1,0 +1,19 @@
+Para fazer um login, ou seja a autenticação do sistema vc precisa de:
+
+: Instalar a biblioteca jsonwebtoken no teu projeto
+
+: Criar um sessioncontroller, que vai receber os dados do login, comparar com os dados do banco e gerar o
+: token utilizando a biblioteca acima e devolver para o front.
+
+: Criar uma config que vai ser utilizado pelo sessioncontroller na criação do toker contendo uma string unica no mundo
+: e um período de expiração, essa string única no mundo vc cria com o site md5online.org
+
+: Cria a rota de login e chama o método do sessioncontroller para logar
+
+: OBS: Pq vc não utiliza o usercontoller? 
+: Pq vc está criando uma seção e não um usuário, por isso a necessidade de outro controller.
+
+
+Para utilizar o token criado para validar as rotas
+
+...
