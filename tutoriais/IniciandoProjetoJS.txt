@@ -136,4 +136,12 @@ npm install --save pg pg-hstore
 
 - npm i
 
+: Cria o banco crudenoderef com senha 123 no postgresql
+
+: rodar as migrations p criar a tabela
+
+- npx sequelize db:migrate:undo:all
+
+- npx sequelize db:migrate
+
 
