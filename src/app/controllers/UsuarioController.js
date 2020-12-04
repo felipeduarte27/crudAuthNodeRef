@@ -47,20 +47,17 @@ class UsuarioController {
    */
   async atualizar(req, res) {
     const { email } = req.body;
+    const { id } = req.body;
 
-    const user = await Usuario.findByPk(req.userId);
+    const user = await Usuario.findByPk(id);
 
-    if (email !== user.email) {
-      const userExists = await Usuario.findOne({ where: { email } });
-
-      if (userExists) {
-        return res.status(400).json({ error: 'Usuário já existe' });
-      }
+    if (!user) {
+      return res.status(400).json({ error: 'Usuário não existe' });
     }
 
-    const { id, name } = await user.update(req.body);
+    await user.update(req.body);
 
-    return res.json({ id, name });
+    return res.json({ id, email });
   }
 
   /**
@@ -70,7 +67,7 @@ class UsuarioController {
    */
   async listar(req, res) {
     const users = await Usuario.findAll({
-      attributes: ['id', 'name', 'email'],
+      attributes: ['id', 'nome', 'email'],
     });
     return res.json(users);
   }

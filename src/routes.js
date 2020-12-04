@@ -8,11 +8,11 @@ routes.get('/', (req, res) => {
   return res.json({ mensagem: 'Olá Mundo' });
 });
 
-routes.post('/criarUsuario', UsuarioController.criar);
-routes.put('/deletarUsuario', UsuarioController.deletar);
-routes.delete('/atualizarUsuario', UsuarioController.atualizar);
+routes.put('/criarUsuario', UsuarioController.criar);
+routes.delete('/deletarUsuario', UsuarioController.deletar);
+routes.post('/atualizarUsuario', UsuarioController.atualizar);
 routes.get('/listarUsuario', UsuarioController.listar);
-routes.get('/buscarUsuario', UsuarioController.buscar);
+routes.post('/buscarUsuario', UsuarioController.buscar);
 
 // exportando as rotas
 export default routes;
