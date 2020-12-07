@@ -113,13 +113,15 @@ npm install --save pg pg-hstore
 
 : Cria o Modelo utilizando os sequelize
 
-: Cria o arquivo de carregamento dos modelos e importa no app.js
+: Cria o arquivo de carregamento dos modelos/conexão com o banco e importa no app.js
 
 : Usando o sequelize-cli cria as migrations
 - npx sequelize migration:create --name=criar-usuario
 
+: Executa as migrations
 - npx sequelize db:migrate
 
+: Desfaz as migrations
 - npx sequelize db:migrate:undo:all
 
 : OBS: A TABELA TEM QUE TER S NO FIM, TIPO USUARIOS E NÃO PODE FALTAR O CREART AT E UPDATE AT
@@ -144,4 +146,4 @@ npm install --save pg pg-hstore
 
 - npx sequelize db:migrate
 
-
+- importa arquivo de rotas do insomnia e testa as rotas e a aplicação.
